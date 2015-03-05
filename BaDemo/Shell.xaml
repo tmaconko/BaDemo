@@ -1,0 +1,11 @@
+﻿<Window x:Class="BaDemo.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://www.codeplex.com/CompositeWPF"
+        Title="Demo" 
+        MinWidth="1024" MinHeight="768"
+        Background="#FFFFFFFF">
+    <Grid>
+         <ContentControl prism:RegionManager.RegionName="MainRegion"  />
+    </Grid>
+</Window>

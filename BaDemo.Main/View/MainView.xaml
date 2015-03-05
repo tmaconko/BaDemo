@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="BaDemo.Main.View.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:regions="http://www.codeplex.com/CompositeWPF"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#FF333333">
+            <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+                <Button Content="Home" Command="{Binding HomeCommand}" Margin="0,0,10,0" />
+                <Button Content="Orders" Command="{Binding OrdersListCommand}" Margin="0,0,10,0"  />
+                <Button Content="Items" Command="{Binding ItemsListCommand}" Margin="0,0,10,0" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1">
+            <ContentControl regions:RegionManager.RegionName="ContentRegion"  />
+        </Border>
+
+        <Border Grid.Row="2" BorderBrush="#FF333333" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5,10,5,10">
+                <TextBlock Text="© 2014 - BA Demo WPF Application" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
